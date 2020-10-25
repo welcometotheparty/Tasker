@@ -8,4 +8,8 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+
+  = link_to 'New Task', new_task_path, class: 'btn btn-light', :id => "new_task_button"
+  = render 'layouts/buttons'
+
+  = yield

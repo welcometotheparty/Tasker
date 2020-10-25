@@ -1,0 +1,14 @@
+
+%div{:class => 'buttons_list'}
+  -if current_user
+    %h1{:class => 'logged_email'}= "logged as: #{current_user.email}"
+    %br
+    = link_to 'Settings', edit_user_registration_path
+    %br
+    = link_to 'Log out', destroy_user_session_path, method: :delete
+    %br
+  -else
+    = link_to 'Registration', new_user_registration_path
+    %br
+    = link_to 'Log in', new_user_session_path
+    %br

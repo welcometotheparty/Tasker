@@ -14,9 +14,24 @@ body {
   text-align: center;
 }
 
+.buttons_list {
+  position:absolute;
+  top:2em;
+  right:2em;
+}
+
+.buttons_list.logged_email{
+}
+
+#new_task_button {
+  position:absolute;
+  bottom:50%;
+  right:2em;
+}
+
 /* how transfer element to bottom-right-corner
 position:absolute;
 bottom:0;
 right:0;
-/*
+*/
 

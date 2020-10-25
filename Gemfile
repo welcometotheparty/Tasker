@@ -56,3 +56,4 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "haml-rails"
+gem 'devise'
