@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%h1{:class => 'all_tasks_h1'} All tasks
+= link_to 'New Task', new_task_path, class: 'btn btn-light'
+
+%p
+
+- @tasks.each do |task|
+  = render 'tasks/task', task:task
+  %br
