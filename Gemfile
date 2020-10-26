@@ -57,3 +57,4 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem "haml-rails"
 gem 'devise'
+gem 'open-weather-ruby-client'

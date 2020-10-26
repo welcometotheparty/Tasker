@@ -1,14 +1,9 @@
 
-%div{:class => 'buttons_list'}
-  -if current_user
-    %h1{:class => 'logged_email'}= "logged as: #{current_user.email}"
-    %br
-    = link_to 'Settings', edit_user_registration_path
-    %br
-    = link_to 'Log out', destroy_user_session_path, method: :delete
-    %br
-  -else
-    = link_to 'Registration', new_user_registration_path
-    %br
-    = link_to 'Log in', new_user_session_path
-    %br
+-if current_user
+  .card.text-center{:style => "width: 18rem;"}
+    .card-body
+      %h5= link_to "#{current_user.email}", edit_user_registration_path, class: 'btn btn-primary'
+      %p
+      %a= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-primary'
+      %p
+      %a= link_to 'New Task', new_task_path, class: 'btn btn-success'
