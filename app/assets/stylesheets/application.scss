@@ -21,11 +21,45 @@ body {
   right:2em;
 }
 
+
+
 #new_task_button {
-  position:absolute;
-  bottom:50%;
-  right:2em;
+
+  margin: 0;
+  position: absolute;
+
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
+
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+
+  }
+}
+
+.card.mb-3:hover {
+  animation: bounce 0.7s;
+}
+
+
+
 
 /* how transfer element to bottom-right-corner
 position:absolute;

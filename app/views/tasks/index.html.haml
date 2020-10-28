@@ -1,13 +1,11 @@
 %p#notice= notice
 
-%h1{:class => 'all_tasks_h1'} All tasks
-%h2{:class => 'lol'} #{$current_temp}
-
-
-
-
-%p
+%a= link_to 'New Task', new_task_path, class: 'btn btn-warning', :id => "new_task_button"
+%br
 
 - @tasks.each do |task|
-  = render 'tasks/task', task:task
+  = render 'tasks/task2', task:task
   %br
+
+
+
