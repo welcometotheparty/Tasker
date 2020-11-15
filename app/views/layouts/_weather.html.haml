@@ -1,0 +1,10 @@
+
+- if current_user
+  - if @data
+    .card(id="weather-card" )
+      .card-body
+        %h5 Temperature in #{@data.name} feels like #{@data.main.feels_like.round} °C
+  - else
+    .card(id="weather-card" )
+      .card-body
+        %h5 City is not defined

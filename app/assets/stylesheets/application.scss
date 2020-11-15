@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
 body {
   margin: 0 auto;
   max-width: 50em;
@@ -14,6 +17,9 @@ body {
   text-align: center;
 }
 
+#new_task_header {
+  font-family: 'Open Sans', sans-serif;
+}
 
 .card.text-center{
   position:absolute;
@@ -21,13 +27,14 @@ body {
   right:2em;
 }
 
-
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
 
 #new_task_button {
 
   margin: 0;
   position: absolute;
-
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -58,6 +65,12 @@ body {
   animation: bounce 0.7s;
 }
 
+#weather-card {
+  position: absolute;
+  top:2em;
+  left:2em;
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 

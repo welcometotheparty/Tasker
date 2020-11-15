@@ -1,10 +1,22 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  require 'open-weather-ruby-client'
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    if current_user
+      @tasks = Task.all
+
+      client = OpenWeather::Client.new(
+          api_key: "8cd9b1dc905603af0a29ae4d72166194"
+      )
+      begin
+        @data = client.current_weather(city: current_user.city, units: 'metric')
+      rescue
+        nil
+      end
+    end
   end
 
   # GET /tasks/1
@@ -58,7 +70,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
+      format.html { redirect_to tasks_url, notice: '' }
       format.json { head :no_content }
     end
   end
