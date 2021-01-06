@@ -3,15 +3,15 @@
 
 = render 'layouts/weather'
 
-
--if current_user
-  %a= link_to 'New Task', new_task_path, class: 'btn btn-warning', :id => "new_task_button"
-  %br
-  - @tasks.each do |task|
-    = render 'tasks/task2', task:task
-  %br
--else
-  %h3= "please, login or register to create a new task "
+.div(id="allTasksHere" )
+  -if current_user
+    %a= link_to 'New Task', new_task_path, class: 'btn btn-warning', :id => "new_task_button"
+    %br
+    - @tasks.each do |task|
+      = render 'tasks/task2', task:task
+    %br
+  -else
+    %h3= "please, login or register to create a new task "
 
 
 

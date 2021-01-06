@@ -8,7 +8,7 @@
         - task.errors.full_messages.each do |message|
           %li= message
   .form
-    .field
+    .field(id="taskForm" )
       = form.text_field :title, placeholder:"Title", class:"form-control mb-3"
     .field
       = form.text_area :content, placeholder:"Comment", class:"form-control"

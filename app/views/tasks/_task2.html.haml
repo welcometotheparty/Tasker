@@ -1,12 +1,11 @@
-.card.mb-3.mt-5{:style => "max-width: 1000px;max-height: 100px;"}
+.card.mb-3{:style => "max-width: 1000px;max-height: 80px;"}
   .row.no-gutters
     .card-body
-      %h5.card-title "#{task.title}"
-      %p.card-text "#{task.content}"
+      .card-title #{task.title}
     .row.no-gutters.text-muted
       .card-body.my-auto
         %p #{task.created_at.strftime("%Y-%m-%d").to_s}
     .row.no-gutters
-      %a= link_to 'Done', task, method: :delete, class: 'btn btn-success btn-bg'
+      %a= link_to 'Done', task, method: :delete, class: 'btn btn-success', id: "doneButton"
 
 
