@@ -1,7 +1,7 @@
 .card.mb-3{:style => "max-width: 1000px;max-height: 80px;"}
   .row.no-gutters
     .card-body
-      .card-title #{task.title}
+      %h6.card-title #{task.title}
     .row.no-gutters.text-muted
       .card-body.my-auto
         %p #{task.created_at.strftime("%Y-%m-%d").to_s}
