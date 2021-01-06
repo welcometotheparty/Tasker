@@ -1,6 +1,5 @@
-# README
+Simple weather&todo website
 
-Ruby 2.7 + RoR 6 + Bootstrap 
+ror-tasker.herokuapp.com
 
-https://ruby-rails-tasker.herokuapp.com/
-
+weather gem https://github.com/dblock/open-weather-ruby-client
